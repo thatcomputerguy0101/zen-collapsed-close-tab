@@ -4,11 +4,17 @@ This mod for [Zen Browser](https://zen-browser.app) shows closed tab buttons whe
 
 ![Demo collapsed sidebar with visible close button on a tab](demo.png)
 
-## Installation
+## Installation (Not yet available on the store)
 
 1. Open https://zen-browser.app/mods in the Zen Browser
 2. Search for "Collapsed Close Tab"
 3. Click "Install Theme"
+
+### Manual Installation
+
+1. Create `userChrome.css` as described at https://docs.zen-browser.app/guides/live-editing
+2. Copy the contents of `chrome.css` from this repository into the newly created `userChrome.css`
+3. Relaunch Zen Browser if necessary to apply the theme
 
 ## Quirks
 
