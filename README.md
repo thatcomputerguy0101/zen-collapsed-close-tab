@@ -2,7 +2,8 @@
 
 This mod for [Zen Browser](https://zen-browser.app) shows closed tab buttons when hovering over tabs when the tab bar is collapsed. It works with the tab bar on either side of the window.
 
-![Demo collapsed sidebar with visible close button on a tab](demo.png)
+![Demo collapsed sidebar with visible close button on a tab (dark mode)](demo.png#gh-dark-mode-only)
+![Demo collapsed sidebar with visible close button on a tab (light mode)](demo-light.png#gh-light-mode-only)
 
 ## Installation (Not yet available on the store)
 
