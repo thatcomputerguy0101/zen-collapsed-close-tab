@@ -24,6 +24,7 @@
   #navigator-toolbox {
     --tab-outwards-direction: rtl;
     --tab-inwards-direction: ltr;
+    --tab-hover-background-base-color: color-mix(in lch, var(--zen-navigator-toolbox-background, light-dark(#E5E5E5, #303030)) 35%, transparent);
     z-index: 4;
 
     .tabbrowser-tab {
@@ -73,21 +74,21 @@
     margin-inline-end: calc(var(--zen-toolbox-padding) - var(--tab-collapsed-hover-expansion-width)) !important;
 
     & .tab-background {
+      --tabbar-transition-offset: calc(var(--tab-collapsed-background-width) + var(--zen-toolbox-padding) + 2px);
+      --tab-base-transition-blending: 3px;
       position: relative;
       width: calc(var(--tab-collapsed-background-width) + var(--tab-collapsed-hover-expansion-width)) !important;
+      z-index: auto !important; /* Allows .tab-background::before to be layered under .tab-background */
 
-      &:not([selected]) {
-        background-color: color-mix(in lch, var(--zen-navigator-toolbox-background, var(--zen-main-browser-background)) 50%, transparent) !important;
+      &::before {
+        content: " ";
+        position: absolute;
+        left: calc(var(--tabbar-transition-offset) - var(--tab-base-transition-blending));
+        width: calc(100% - var(--tabbar-transition-offset) + var(--tab-base-transition-blending));;
+        height: 100%;
+        background: linear-gradient(to right, transparent, var(--tab-hover-background-base-color) var(--tab-base-transition-blending));
+        z-index: -1;
       }
-    }
-
-    & .tab-background:not([selected])::before {
-      content: " ";
-      position: absolute;
-      top: 0px;
-      width: 100%;
-      height: 100%;
-      background-color: var(--tab-hover-background-color);
     }
 
     & .tab-close-button {
