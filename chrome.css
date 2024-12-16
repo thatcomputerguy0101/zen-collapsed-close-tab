@@ -1,48 +1,14 @@
-@keyframes zen-slide-in-left {
-  from {
-    transform: translateX(-30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes zen-slide-in-right {
-  from {
-    transform: translateX(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
 @media (-moz-bool-pref: "zen.tabs.vertical") and (not (-moz-bool-pref: "zen.view.sidebar-expanded")) {
   #navigator-toolbox {
     --tab-outwards-direction: rtl;
     --tab-inwards-direction: ltr;
     --tab-hover-background-base-color: color-mix(in lch, var(--zen-navigator-toolbox-background, light-dark(#E5E5E5, #303030)) 35%, transparent);
     --browser-area-z-index-toolbox: 4;
-
-    .tabbrowser-tab {
-      animation: none !important;
-
-      & > * {
-        animation: zen-slide-in-left 0.2s ease-in-out;
-      }
-    }
   }
 
   #navigator-toolbox[zen-right-side="true"] {
     --tab-outwards-direction: ltr;
     --tab-inwards-direction: rtl;
-
-    .tabbrowser-tab > * {
-      animation: zen-slide-in-right 0.2s ease-in-out;
-    }
   }
 
   #tabbrowser-arrowscrollbox {
