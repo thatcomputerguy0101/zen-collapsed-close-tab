@@ -68,7 +68,7 @@
 
   .tabbrowser-tab:not([pinned]):hover {
     --tab-icon-width: 12px;
-    --tab-collapsed-hover-expansion-width: calc(24px + var(--toolbarbutton-inner-padding) - var(--tab-inline-padding) / 2);
+    --tab-collapsed-hover-expansion-width: calc(24px + var(--toolbarbutton-inner-padding) - var(--tab-close-button-padding));
     height: calc(var(--tab-min-height) + 2 * var(--tab-block-margin));
     margin-inline-start: var(--zen-toolbox-padding) !important;
     margin-inline-end: calc(var(--zen-toolbox-padding) - var(--tab-collapsed-hover-expansion-width)) !important;
