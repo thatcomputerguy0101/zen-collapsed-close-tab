@@ -25,7 +25,7 @@
     --tab-outwards-direction: rtl;
     --tab-inwards-direction: ltr;
     --tab-hover-background-base-color: color-mix(in lch, var(--zen-navigator-toolbox-background, light-dark(#E5E5E5, #303030)) 35%, transparent);
-    z-index: 4;
+    z-index: 4 !important;
 
     .tabbrowser-tab {
       animation: none !important;
