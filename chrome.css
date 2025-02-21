@@ -15,21 +15,23 @@
     --tab-inwards-direction: rtl;
   }
 
-  #zen-browser-tabs-wrapper {
+  #zen-browser-tabs-wrapper,
+  #tabbrowser-tabs {
     pointer-events: none;
-    margin-inline-start: -30px;
-    padding-inline-start: 30px;
-    direction: var(--tab-outwards-direction);
+    direction: var(--tab-outwards-direction) !important;
+    margin-inline-start: -30px !important;
+    padding-inline-start: 30px !important;
 
     & > * {
+      pointer-events: auto;
       direction: var(--tab-inwards-direction);
     }
   }
 
   #tabbrowser-arrowscrollbox {
     pointer-events: none;
-    margin-inline-start: -30px;
     direction: var(--tab-outwards-direction);
+    margin-inline-start: -30px;
 
     &::part(scrollbox) {
       & {
@@ -65,7 +67,8 @@
 
     & .tab-background {
       --tabbar-transition-offset: calc(
-        var(--tab-collapsed-background-width) + var(--zen-toolbox-padding) + 2px
+        var(--tab-collapsed-background-width) + var(--computed-toolbox-padding) +
+          0px
       );
       --tab-base-transition-blending: 3px;
       position: relative;
